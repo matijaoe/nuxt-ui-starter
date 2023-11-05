@@ -23,9 +23,6 @@ devDependencies:
   '@nuxt/ui':
     specifier: ^2.10.0
     version: 2.10.0(vue@3.3.7)(webpack@5.89.0)
-  '@nuxtjs/color-mode':
-    specifier: ^3.3.0
-    version: 3.3.0
   '@nuxtjs/fontaine':
     specifier: ^0.4.1
     version: 0.4.1
@@ -50,9 +47,6 @@ devDependencies:
   nuxt:
     specifier: ^3.8.0
     version: 3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
-  nuxt-icon:
-    specifier: 0.6.1
-    version: 0.6.1(vue@3.3.7)
   pinia:
     specifier: ^2.1.6
     version: 2.1.7(typescript@5.2.2)(vue@3.3.7)
@@ -1068,15 +1062,6 @@ packages:
       local-pkg: 0.4.3
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@iconify/vue@4.1.1(vue@3.3.7):
-    resolution: {integrity: sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==}
-    peerDependencies:
-      vue: '>=3'
-    dependencies:
-      '@iconify/types': 2.0.0
-      vue: 3.3.7(typescript@5.2.2)
     dev: true
 
   /@ioredis/commands@1.2.0:
@@ -7317,17 +7302,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
-    dev: true
-
-  /nuxt-icon@0.6.1(vue@3.3.7):
-    resolution: {integrity: sha512-a4/MEmbP2hXB0sLWBqevC+569FADEMs+VfYJ6nzbktUSJY57/PoHyen0PtqAAkMjGGhHgDVHAcjy5RCJyYZRYg==}
-    dependencies:
-      '@iconify/vue': 4.1.1(vue@3.3.7)
-      '@nuxt/kit': 3.8.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-      - vue
     dev: true
 
   /nuxt@3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0):

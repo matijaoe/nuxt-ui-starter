@@ -9,26 +9,26 @@ const pages = [
   {
     id: 'home',
     label: 'Home',
+    icon: 'i-ph-house-duotone',
     click: () => {
       navigateTo({ name: 'index' })
     },
-    icon: 'i-ph-house-duotone'
   },
   {
     id: 'about',
     label: 'About',
+    icon: 'i-ph-info-duotone',
     click: () => {
       navigateTo({ name: 'settings' })
     },
-    icon: 'i-ph-info-duotone',
   },
   {
     id: 'settings',
     label: 'Settings',
+    icon: 'i-ph-gear-six-duotone',
     click: () => {
       navigateTo({ name: 'settings' })
     },
-    icon: 'i-ph-gear-six-duotone'
   },
 
 ]
@@ -63,7 +63,7 @@ function onSelect(option: any) {
 }
 
 defineShortcuts({
-  'meta_k': () => toggleCommandPalette,
+  'meta_k': () => toggleCommandPalette(),
   "meta_j": () => {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }

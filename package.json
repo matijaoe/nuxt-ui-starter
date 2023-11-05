@@ -1,11 +1,11 @@
 {
-  "name": "nuxt-starter",
+  "name": "nuxt-ui-starter",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.10.0",
   "license": "MIT",
   "engines": {
-    "node": ">=18.0"
+    "node": ">=20.0"
   },
   "scripts": {
     "build": "nuxt build",
@@ -23,7 +23,6 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0",
     "@nuxt/ui": "^2.10.0",
-    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
@@ -32,7 +31,6 @@
     "@vueuse/nuxt": "10.5.0",
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
-    "nuxt-icon": "0.6.1",
     "pinia": "^2.1.6",
     "postcss-nesting": "^12.0.1",
     "vue": "^3.3.7",

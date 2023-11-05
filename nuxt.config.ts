@@ -19,14 +19,14 @@ export default defineNuxtConfig({
   },
 
   fontMetrics: {
-    fonts: ["DM Sans"],
+    fonts: ["Inter"],
   },
 
   googleFonts: {
     display: "swap",
     download: true,
     families: {
-      "DM+Sans": [400, 500, 600, 700],
+      Inter: [400, 500, 600, 700],
     },
   },
 
@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Nuxt Starter",
+      title: "Nuxt UI Starter",
     },
   },
 

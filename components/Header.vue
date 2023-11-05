@@ -47,7 +47,7 @@ const { metaSymbol } = useShortcuts()
           @click="openCommandPalette" />
       </UTooltip>
 
-      <UTooltip :text="`Switch to ${colorMode.value === 'light' ? 'dark' : 'light'}`" :shortcuts="['⌘', 'J']">
+      <UTooltip :text="`Switch to ${colorMode.value === 'light' ? 'dark' : 'light'}`" :shortcuts="[metaSymbol, 'J']">
         <ColorModeButton />
       </UTooltip>
 
