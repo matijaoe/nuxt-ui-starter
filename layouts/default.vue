@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 const { isCommandPaletteOpen, closeCommandPalette, toggleCommandPalette } = useCommandPalette()
 const colorMode = useColorMode()
 const toast = useToast()
@@ -45,7 +44,8 @@ const groups = computed(() => [
     key: 'pages',
     label: 'Pages',
     commands: pages
-  }, {
+  },
+  {
     key: 'actions',
     commands: actions
   }
@@ -63,8 +63,8 @@ function onSelect(option: any) {
 }
 
 defineShortcuts({
-  'meta_k': () => toggleCommandPalette(),
-  "meta_j": () => {
+  meta_k: () => toggleCommandPalette(),
+  meta_j: () => {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }
 })

@@ -1,14 +1,3 @@
-<template>
-  <ClientOnly>
-    <UButton size="sm" :icon="isDark ? 'i-ph-sun-duotone' : 'i-ph-moon-duotone'" color="gray" variant="ghost"
-      aria-label="Theme" @click="isDark = !isDark" />
-
-    <template #fallback>
-      <div class="w-8 h-8" />
-    </template>
-  </ClientOnly>
-</template>
-
 <script setup lang="ts">
 const colorMode = useColorMode()
 
@@ -21,3 +10,20 @@ const isDark = computed({
   }
 })
 </script>
+
+<template>
+  <ClientOnly>
+    <UButton
+      size="sm"
+      :icon="isDark ? 'i-ph-sun-duotone' : 'i-ph-moon-duotone'"
+      color="gray"
+      variant="ghost"
+      aria-label="Theme"
+      @click="isDark = !isDark"
+    />
+
+    <template #fallback>
+      <div class="w-8 h-8" />
+    </template>
+  </ClientOnly>
+</template>

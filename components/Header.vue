@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import type { RouteLocationRaw } from '#ui-colors/vue-router-stub';
+import type { RouteLocationRaw } from '#ui-colors/vue-router-stub'
 
-const colorMode = useColorMode();
-const { openCommandPalette } = useCommandPalette();
-
-
+const colorMode = useColorMode()
+const { openCommandPalette } = useCommandPalette()
 
 const links = computed<{
-  label: string,
-  icon: string,
+  label: string
+  icon: string
   to: RouteLocationRaw
 }[]>(() => ([
   {
@@ -43,8 +41,14 @@ const { metaSymbol } = useShortcuts()
       <ColorPicker />
 
       <UTooltip text="Search" :shortcuts="[metaSymbol, 'K']">
-        <UButton icon="i-ph-magnifying-glass-duotone" size="sm" square variant="ghost" color="gray"
-          @click="openCommandPalette" />
+        <UButton
+          icon="i-ph-magnifying-glass-duotone"
+          size="sm"
+          square
+          variant="ghost"
+          color="gray"
+          @click="openCommandPalette"
+        />
       </UTooltip>
 
       <UTooltip :text="`Switch to ${colorMode.value === 'light' ? 'dark' : 'light'}`" :shortcuts="[metaSymbol, 'J']">
@@ -52,8 +56,16 @@ const { metaSymbol } = useShortcuts()
       </UTooltip>
 
       <UTooltip text="GitHub">
-        <UButton to="https://github.com/nuxt/ui" target="_blank" icon="i-simple-icons-github" aria-label="GitHub"
-          size="sm" square variant="ghost" color="gray" />
+        <UButton
+          to="https://github.com/nuxt/ui"
+          target="_blank"
+          icon="i-simple-icons-github"
+          aria-label="GitHub"
+          size="sm"
+          square
+          variant="ghost"
+          color="gray"
+        />
       </UTooltip>
     </template>
   </UHeader>

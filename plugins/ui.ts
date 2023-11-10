@@ -1,56 +1,57 @@
-import colors from "#tailwind-config/theme/colors";
+import { isClient } from '@vueuse/core'
+import colors from '#tailwind-config/theme/colors'
 
 export default defineNuxtPlugin({
-  enforce: "post",
+  enforce: 'post',
   setup() {
-    const appConfig = useAppConfig();
+    const appConfig = useAppConfig()
 
     const root = computed(() => {
-      const primary: Record<string, string> | undefined =
-        colors[appConfig.ui.primary];
-      const gray: Record<string, string> | undefined =
-        colors[appConfig.ui.gray];
+      const primary: Record<string, string> | undefined
+        = colors[appConfig.ui.primary]
+      const gray: Record<string, string> | undefined
+        = colors[appConfig.ui.gray]
 
       return `:root {
         ${Object.entries(primary || colors.green)
           .map(([key, value]) => `--color-primary-${key}: ${hexToRgb(value)};`)
-          .join("\n")}
+          .join('\n')}
         --color-primary-DEFAULT: var(--color-primary-500);
 
         ${Object.entries(gray || colors.cool)
           .map(([key, value]) => `--color-gray-${key}: ${hexToRgb(value)};`)
-          .join("\n")}
+          .join('\n')}
         }
 
         .dark {
           --color-primary-DEFAULT: var(--color-primary-400);
         }
-        `;
-    });
+        `
+    })
 
-    if (process.client) {
+    if (isClient) {
       watch(root, () => {
-        window.localStorage.setItem("nuxt-ui-root", root.value);
-      });
+        window.localStorage.setItem('nuxt-ui-root', root.value)
+      })
 
-      appConfig.ui.primary =
-        window.localStorage.getItem("nuxt-ui-primary") || appConfig.ui.primary;
-      appConfig.ui.gray =
-        window.localStorage.getItem("nuxt-ui-gray") || appConfig.ui.gray;
+      appConfig.ui.primary
+        = window.localStorage.getItem('nuxt-ui-primary') || appConfig.ui.primary
+      appConfig.ui.gray
+        = window.localStorage.getItem('nuxt-ui-gray') || appConfig.ui.gray
     }
-    if (process.server) {
+    if (!isClient) {
       useHead({
         script: [
           {
             innerHTML: `
                 if (localStorage.getItem('nuxt-ui-root')) {
                   document.querySelector('style#nuxt-ui-colors').innerHTML = localStorage.getItem('nuxt-ui-root')
-                }`.replace(/\s+/g, " "),
-            type: "text/javascript",
+                }`.replace(/\s+/g, ' '),
+            type: 'text/javascript',
             tagPriority: -1,
           },
         ],
-      });
+      })
     }
   },
-});
+})

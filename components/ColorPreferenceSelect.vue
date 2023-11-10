@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-const colorOptions = ['system', 'light', 'dark'];
+const colorOptions = ['system', 'light', 'dark']
 </script>
-
 
 <template>
   <ClientOnly>
     <ColorScheme>
-      <USelect class="mr-4" size="sm" v-model="$colorMode.preference" variant="outline" :options="colorOptions" />
+      <USelect v-model="$colorMode.preference" class="mr-4" size="sm" variant="outline" :options="colorOptions" />
     </ColorScheme>
   </ClientOnly>
 </template>

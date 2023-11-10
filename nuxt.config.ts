@@ -1,17 +1,17 @@
 export default defineNuxtConfig({
   modules: [
-    "@vueuse/nuxt",
-    "@pinia/nuxt",
-    "@nuxt/image",
-    "@nuxt/devtools",
-    "@nuxt/ui",
-    "@nuxtjs/google-fonts",
-    "@nuxtjs/fontaine",
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@nuxt/image',
+    '@nuxt/devtools',
+    '@nuxt/ui',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/fontaine',
   ],
 
   ui: {
     global: true,
-    icons: ["ph", "simple-icons"],
+    icons: ['ph', 'simple-icons'],
   },
 
   experimental: {
@@ -19,11 +19,11 @@ export default defineNuxtConfig({
   },
 
   fontMetrics: {
-    fonts: ["Inter"],
+    fonts: ['Inter'],
   },
 
   googleFonts: {
-    display: "swap",
+    display: 'swap',
     download: true,
     families: {
       Inter: [400, 500, 600, 700],
@@ -41,17 +41,17 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      "postcss-nesting": {},
+      'postcss-nesting': {},
     },
   },
 
   app: {
     head: {
-      title: "Nuxt UI Starter",
+      title: 'Nuxt UI Starter',
     },
   },
 
   devtools: {
     enabled: true,
   },
-});
+})
