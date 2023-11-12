@@ -1,6 +1,3 @@
-<script lang="ts" setup>
-</script>
-
 <template>
   <div class="space-y-8">
     <UCard v-for="n in 20" :key="n">
