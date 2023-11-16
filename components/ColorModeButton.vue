@@ -2,10 +2,10 @@
 const colorMode = useColorMode()
 
 const isDark = computed({
-  get() {
+  get: () => {
     return colorMode.value === 'dark'
   },
-  set() {
+  set: () => {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }
 })
@@ -15,7 +15,7 @@ const isDark = computed({
   <ClientOnly>
     <UButton
       size="sm"
-      :icon="isDark ? 'i-ph-sun-duotone' : 'i-ph-moon-duotone'"
+      :icon="isDark ? 'i-ph-sun-bold' : 'i-ph-moon-bold'"
       color="gray"
       variant="ghost"
       aria-label="Theme"

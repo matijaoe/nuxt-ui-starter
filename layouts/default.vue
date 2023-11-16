@@ -8,7 +8,7 @@ const pages = [
   {
     id: 'home',
     label: 'Home',
-    icon: 'i-ph-house-duotone',
+    icon: 'i-ph-house-bold',
     click: () => {
       navigateTo({ name: 'index' })
     },
@@ -16,7 +16,7 @@ const pages = [
   {
     id: 'about',
     label: 'About',
-    icon: 'i-ph-info-duotone',
+    icon: 'i-ph-info-bold',
     click: () => {
       navigateTo({ name: 'settings' })
     },
@@ -24,7 +24,7 @@ const pages = [
   {
     id: 'settings',
     label: 'Settings',
-    icon: 'i-ph-gear-six-duotone',
+    icon: 'i-ph-gear-six-bold',
     click: () => {
       navigateTo({ name: 'settings' })
     },
@@ -33,10 +33,10 @@ const pages = [
 ]
 
 const actions = [
-  { id: 'new-file', label: 'Add new file', icon: 'i-ph-file-text-duotone', click: () => toast.add({ title: 'New file added!' }), shortcuts: [metaSymbol.value, 'N'] },
-  { id: 'new-folder', label: 'Add new folder', icon: 'i-ph-folder-plus-duotone', click: () => toast.add({ title: 'New folder added!' }), shortcuts: [metaSymbol.value, 'F'] },
-  { id: 'hashtag', label: 'Add hashtag', icon: 'i-ph-hash-duotone', click: () => toast.add({ title: 'Hashtag added!' }), shortcuts: [metaSymbol.value, 'H'] },
-  { id: 'label', label: 'Add label', icon: 'i-ph-tag-duotone', click: () => toast.add({ title: 'Label added!' }), shortcuts: [metaSymbol.value, 'L'] }
+  { id: 'new-file', label: 'Add new file', icon: 'i-ph-file-text-bold', click: () => toast.add({ title: 'New file added!' }), shortcuts: [metaSymbol.value, 'N'] },
+  { id: 'new-folder', label: 'Add new folder', icon: 'i-ph-folder-plus-bold', click: () => toast.add({ title: 'New folder added!' }), shortcuts: [metaSymbol.value, 'F'] },
+  { id: 'hashtag', label: 'Add hashtag', icon: 'i-ph-hash-bold', click: () => toast.add({ title: 'Hashtag added!' }), shortcuts: [metaSymbol.value, 'H'] },
+  { id: 'label', label: 'Add label', icon: 'i-ph-tag-bold', click: () => toast.add({ title: 'Label added!' }), shortcuts: [metaSymbol.value, 'L'] }
 ]
 
 const groups = computed(() => [

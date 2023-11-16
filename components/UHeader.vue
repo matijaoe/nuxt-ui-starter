@@ -41,8 +41,8 @@ const mobileMenuOpen = ref(false)
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
           <span
-            class="i-ph-list-duotone flex-shrink-0 h-5 w-5"
-            :class="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list-duotone'"
+            class="i-ph-list-bold flex-shrink-0 h-5 w-5"
+            :class="mobileMenuOpen ? 'i-ph-x-bold' : 'i-ph-list-bold'"
             aria-hidden="true"
           />
         </button>

@@ -11,17 +11,17 @@ const links = computed<{
 }[]>(() => ([
   {
     label: 'Home',
-    icon: 'i-ph-house-duotone',
+    icon: 'i-ph-house-bold',
     to: `/`
   },
   {
     label: 'About',
-    icon: 'i-ph-info-duotone',
+    icon: 'i-ph-info-bold',
     to: '/about'
   },
   {
     label: 'Settings',
-    icon: 'i-ph-gear-six-duotone',
+    icon: 'i-ph-gear-six-bold',
     to: '/settings'
   }
 ].filter(Boolean)))
@@ -42,7 +42,7 @@ const { metaSymbol } = useShortcuts()
 
       <UTooltip text="Search" :shortcuts="[metaSymbol, 'K']">
         <UButton
-          icon="i-ph-magnifying-glass-duotone"
+          icon="i-ph-magnifying-glass-bold"
           size="sm"
           square
           variant="ghost"
