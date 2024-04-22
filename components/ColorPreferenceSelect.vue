@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const colorOptions = ['system', 'light', 'dark']
+const colorOptions: string[] = ['system', 'light', 'dark']
 </script>
 
 <template>
